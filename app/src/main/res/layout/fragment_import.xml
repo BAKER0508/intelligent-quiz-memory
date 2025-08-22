@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="导入题目"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_text_color"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Import Instructions -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="导入说明"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_text_color"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• 填空题：答案用(小括号)包围，或题目包含____下划线\n• 简答题：题目后跟？或问号，答案在下一行\n• 自动编号：支持1. 2. 或(1)(2)格式\n• 字符限制：最多10万字符，1000道题"
+                    android:textSize="14sp"
+                    android:textColor="@color/secondary_text_color"
+                    android:lineSpacingExtra="2dp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Content Input -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="粘贴题目内容"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary_text_color" />
+
+                    <TextView
+                        android:id="@+id/text_view_char_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="字符数: 0 / 100000"
+                        android:textSize="12sp"
+                        android:textColor="@color/secondary_text_color" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edit_text_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/edit_text_background"
+                    android:padding="12dp"
+                    android:gravity="top"
+                    android:hint="在此粘贴Word文档内容..."
+                    android:textSize="14sp"
+                    android:scrollbars="vertical"
+                    android:inputType="textMultiLine" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Preview Stats -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/stats_background"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/text_view_stats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="预览统计：\n无内容"
+                android:textSize="14sp"
+                android:textColor="@color/stats_text_color"
+                android:padding="16dp"
+                android:lineSpacingExtra="2dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Library Selection -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="选择目标题库"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_text_color"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Target Library Spinner -->
+                <Spinner
+                    android:id="@+id/spinner_target_library"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_outline"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- New Library Name (shown when "创建新题库" is selected) -->
+                <EditText
+                    android:id="@+id/edit_text_new_library_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_outline"
+                    android:hint="输入新题库名称..."
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_secondary"
+                    android:textSize="12sp"
+                    android:paddingHorizontal="12dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Import Button -->
+        <Button
+            android:id="@+id/button_import"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="开始导入"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_primary"
+            android:paddingVertical="16dp"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+
+</ScrollView>

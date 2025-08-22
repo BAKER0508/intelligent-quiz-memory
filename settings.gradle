@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "智能题库记忆系统"

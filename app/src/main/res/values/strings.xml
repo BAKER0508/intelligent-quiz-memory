@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">智能题库记忆系统</string>
+    <string name="study_activity_title">题库练习</string>
+    
+    <!-- Bottom Navigation -->
+    <string name="nav_library">题库</string>
+    <string name="nav_import">导入</string>
+    <string name="nav_statistics">统计</string>
+    
+    <!-- Study Modes -->
+    <string name="sequential_practice">顺序练习</string>
+    <string name="random_practice">随机练习</string>
+    <string name="memory_mode">记忆模式</string>
+    <string name="error_questions">错题集</string>
+    <string name="favorite_questions">收藏题目</string>
+    <string name="add_questions">添加题目</string>
+    
+    <!-- Memory Test -->
+    <string name="memory_test_prompt">请先回忆答案：</string>
+    <string name="btn_remember">记得</string>
+    <string name="btn_not_remember">不记得</string>
+    <string name="memory_verify_prompt">您的回忆是否正确？</string>
+    <string name="btn_correct">记对了</string>
+    <string name="btn_incorrect">记错了</string>
+    <string name="btn_next">下一题</string>
+    <string name="answer_label">标准答案：</string>
+    
+    <!-- Import -->
+    <string name="import_title">导入题目</string>
+    <string name="import_instructions">导入说明</string>
+    <string name="import_instructions_content">• 填空题：答案用(小括号)包围，或题目包含____下划线\n• 简答题：题目后跟？或问号，答案在下一行\n• 自动编号：支持1. 2. 或(1)(2)格式\n• 字符限制：最多10万字符，1000道题</string>
+    <string name="paste_content_hint">在此粘贴Word文档内容...</string>
+    <string name="char_count_format">字符数: %d / 100000</string>
+    <string name="preview_stats_empty">预览统计：\n无内容</string>
+    <string name="preview_stats_format">预览统计：\n总题数：%d\n填空题：%d\n简答题：%d</string>
+    <string name="target_library">选择目标题库</string>
+    <string name="create_new_library">创建新题库</string>
+    <string name="use_existing_library">使用现有题库</string>
+    <string name="library_name_hint">输入新题库名称...</string>
+    <string name="btn_import">开始导入</string>
+    <string name="importing">导入中...</string>
+    
+    <!-- Statistics -->
+    <string name="statistics_title">学习统计</string>
+    <string name="total_libraries">题库总数</string>
+    <string name="total_questions">题目总数</string>
+    <string name="fill_blank_count">填空题数</string>
+    <string name="short_answer_count">简答题数</string>
+    <string name="study_performance">学习表现</string>
+    <string name="correct_rate">正确率</string>
+    <string name="total_study_time">累计学习时间</string>
+    <string name="study_progress">学习进度</string>
+    <string name="feature_developing">功能开发中，敬请期待...</string>
+    
+    <!-- Messages -->
+    <string name="practice_completed">练习完成！</string>
+    <string name="import_success">导入成功！</string>
+    <string name="import_failed">导入失败，请检查格式</string>
+    <string name="content_required">请输入题目内容</string>
+    <string name="char_limit_exceeded">内容超过10万字符限制</string>
+    <string name="library_name_required">请输入题库名称</string>
+    <string name="select_target_library">请选择目标题库</string>
+</resources>
